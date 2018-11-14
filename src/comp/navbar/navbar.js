@@ -7,10 +7,27 @@ const navBarEvents = () => {
   $('.nav-link').on('click', (event) => {
     if (event.target.id === 'navBar-button-logout') {
       firebase.auth().signOut().then(() => {
-        console.log('you logged out homie');
+        $('#auth').show();
+        $('#friends').hide();
+        $('#holidays').hide();
       }).catch((err) => {
         console.log(err);
       });
+    }
+    if (event.target.id === 'navBar-button-holidays') {
+      $('#auth').hide();
+      $('#friends').hide();
+      $('#holidays').show();
+    }
+    if (event.target.id === 'navBar-button-friends') {
+      $('#auth').hide();
+      $('#friends').show();
+      $('#holidays').hide();
+    }
+    if (event.target.id === 'navBar-button-auth') {
+      $('#auth').show();
+      $('#friends').hide();
+      $('#holidays').hide();
     }
   });
 };
