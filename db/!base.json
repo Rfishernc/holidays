@@ -1,0 +1,93 @@
+{
+  "friends": {
+    "friend1": {
+      "name": "Callan M.",
+      "address": "1 Main Street, Nashville, TN 37209",
+      "phoneNumber": "1111111111",
+      "email": "callan@yomamma.com",
+      "relationship": "sister from anotha mother",
+      "isAvoiding": true,
+      "uid": "12345"
+    },
+    "friend2": {
+      "name": "Lauren R.",
+      "address": "2 Main Street, Nashville, TN 37209",
+      "phoneNumber": "2222222222",
+      "email": "lauren@yomamma.com",
+      "relationship": "work wife",
+      "isAvoiding": false,
+      "uid": "12345"
+    },
+    "friend3": {
+      "name": "Santa Claws",
+      "address": "3 Main Street, Nashville, TN 37209",
+      "phoneNumber": "3333333333",
+      "email": "santa@yomamma.com",
+      "relationship": "Nope, nope, nope",
+      "isAvoiding": true,
+      "uid": "12345"
+    },
+    "friend4": {
+      "name": "Other Adam",
+      "address": "4 Main Street, Nashville, TN 37209",
+      "phoneNumber": "4444444444",
+      "email": "other@yomamma.com",
+      "relationship": "2nd best adam",
+      "isAvoiding": false,
+      "uid": "12345"
+    },
+    "friend5": {
+      "name": "Holiday Armidillo",
+      "address": "5 Main Street, Nashville, TN 37209",
+      "phoneNumber": "5555555555",
+      "email": "armidillo@yomamma.com",
+      "relationship": "Bringing joy to all the children",
+      "isAvoiding": false,
+      "uid": "67890"
+    }
+  },
+  "holidays": {
+    "holiday1": {
+      "name": "Thanksgiving",
+      "Date": "11/22/2018",
+      "imageUrl": "http://www.todayifoundout.com/wp-content/uploads/2017/11/thanksgiving-turkey-640x427.png",
+      "location": "NSS",
+      "startTime": "11am",
+      "uid": "12345"
+    },
+    "holiday2": {
+      "name": "Groundhog's Day",
+      "Date": "2/2/2019",
+      "imageUrl": "http://holidayinsights.com/artwork/ghog.jpg",
+      "location": "Punxsutawney, Pennsylvania",
+      "startTime": "9am",
+      "uid": "12345"
+    },
+    "holiday3": {
+      "name": "Autumnal Equinox",
+      "Date": "9/23/2019",
+      "imageUrl": "https://www.farmersalmanac.com/wp-content/uploads/2014/09/Autumn-Equinox-i830299098-600x319.jpeg",
+      "location": "The Earth",
+      "startTime": "12am",
+      "uid": "67890"
+    }
+  },
+  "holidayFriends": {
+    "hf1": {
+      "holidayId": "holiday1",
+      "friendId": "friend1"
+    },
+    "hf2": {
+      "holidayId": "holiday1",
+      "friendId": "friend2"
+    },
+    "hf3": {
+      "holidayId": "holiday1",
+      "friendId": "friend3"
+    },
+    "hf4": {
+      "holidayId": "holiday3",
+      "friendId": "friend5"
+    }
+  }
+}
