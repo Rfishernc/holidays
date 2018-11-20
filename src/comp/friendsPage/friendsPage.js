@@ -11,7 +11,7 @@ const printSingleFriend = (friend) => {
       <p>${friend.address}</p>
       <p>${friend.email}</p>
       <p>${friend.phoneNumber}</p>
-      <button class='btn btn-danger delete-btn'>X</button>
+      <button class='btn btn-danger delete-btn' data-delete-id=${friend.id}>X</button>
     </div>`;
   $('#single-container').html(friendString);
 };
@@ -35,9 +35,14 @@ const buildDropDown = (friendsArray) => {
     Dropdown button
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">`;
-  friendsArray.forEach((friend) => {
-    dropDown += `<div class="dropdown-item" data-dropdown-id=${friend.id}>${friend.name}</div>`;
-  });
+  if (friendsArray.length) {
+    friendsArray.forEach((friend) => {
+      dropDown += `<div class="dropdown-item get-single" data-dropdown-id=${friend.id}>${friend.name}</div>`;
+    });
+  } else {
+    dropDown += `
+    <div class="dropdown-item">You have no friends.</div>`;
+  }
   dropDown += `</div>
     </div>`;
   $('#dropdown-container').html(dropDown);
@@ -62,8 +67,21 @@ const friendsPage = () => {
     });
 };
 
+const deleteFriend = (event) => {
+  const idToDelete = event.target.dataset.deleteId;
+  axios.delete(`${apiKeys.firebaseKeys.databaseURL}/friends/${idToDelete}.json`)
+    .then(() => {
+      friendsPage();
+      $('#single-container').html('');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 const bindEvents = () => {
-  $('body').on('click', '.dropdown-item', getSingleFriend);
+  $('body').on('click', '.get-single', getSingleFriend);
+  $('body').on('click', '.delete-btn', deleteFriend);
 };
 
 const initFriendsPage = () => {
@@ -78,4 +96,5 @@ export default {
   bindEvents,
   initFriendsPage,
   printSingleFriend,
+  deleteFriend,
 };
