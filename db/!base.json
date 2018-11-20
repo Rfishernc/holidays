@@ -7,7 +7,7 @@
       "email": "callan@yomamma.com",
       "relationship": "sister from anotha mother",
       "isAvoiding": true,
-      "uid": "12345"
+      "uid": "zVZU0SK8uKT3cY3CyPGQKfDKujU2"
     },
     "friend2": {
       "name": "Lauren R.",
@@ -16,7 +16,7 @@
       "email": "lauren@yomamma.com",
       "relationship": "work wife",
       "isAvoiding": false,
-      "uid": "12345"
+      "uid": "zVZU0SK8uKT3cY3CyPGQKfDKujU2"
     },
     "friend3": {
       "name": "Santa Claws",
@@ -25,7 +25,7 @@
       "email": "santa@yomamma.com",
       "relationship": "Nope, nope, nope",
       "isAvoiding": true,
-      "uid": "12345"
+      "uid": "zVZU0SK8uKT3cY3CyPGQKfDKujU2"
     },
     "friend4": {
       "name": "Other Adam",
@@ -34,7 +34,7 @@
       "email": "other@yomamma.com",
       "relationship": "2nd best adam",
       "isAvoiding": false,
-      "uid": "12345"
+      "uid": "zVZU0SK8uKT3cY3CyPGQKfDKujU2"
     },
     "friend5": {
       "name": "Holiday Armidillo",
