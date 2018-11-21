@@ -36,7 +36,7 @@ const getFriendFromForm = () => {
     isAvoiding: false,
     uid: authHelpers.getCurrentUid(),
   };
-  return friend;
+  console.log(friend);
 };
 
 export default {
