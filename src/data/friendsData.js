@@ -33,6 +33,8 @@ const getSingleFriend = friendId => new Promise((resolve, reject) => {
     });
 });
 
+const updatedIsAvoiding = (friendId, isAvoiding) => axios.patch(`${apiKeys.firebaseKeys.databaseURL}/friends/${friendId}.json`, { isAvoiding });
+
 const deleteFriend = friendId => axios.delete(`${apiKeys.firebaseKeys.databaseURL}/friends/${friendId}.json`);
 
 const addNewFriend = friendObject => axios.post(`${apiKeys.firebaseKeys.databaseURL}/friends.json`, JSON.stringify(friendObject));
@@ -45,4 +47,5 @@ export default {
   deleteFriend,
   addNewFriend,
   updateFriend,
+  updatedIsAvoiding,
 };
